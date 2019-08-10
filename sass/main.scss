@@ -183,18 +183,25 @@ body, html {
 @media (max-width: 768px)  {
     //WRAP BIG BOXES
     .intgrid__container-boxwrapper,
-    .intgrid__griditem--bigbox {
+    .intgrid__griditem--bigbox,
+    .intgrid__griditem--singlecol {
         width: 100%;
     }
 
-    .intgrid__container-boxwrapper--singlecol {
+    .intgrid__container-boxwrapper--singlecol
+     {
         width: 50%;         
+    }
+
+    .intgrid__container-boxwrapper--singlecol:last-child {
+        order: -1;
     }
 }
 
 @media (max-width: 576px)  {
     //WRAP ALL BOXES
-    .intgrid__griditem {  
+    .intgrid__griditem,
+    .intgrid__container-boxwrapper--singlecol {  
         width: 100%;
     }
 }

@@ -204,6 +204,10 @@ footer {
     .intgrid__container-boxwrapper--singlecol:last-child {
         order: -1;
     }
+
+    .intgrid__griditem--bigbox:first-child {
+        order: 1;   
+    }
 }
 
 @media (max-width: 576px)  {

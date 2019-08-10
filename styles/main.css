@@ -17,6 +17,13 @@ body, html {
 ::before {
   box-sizing: border-box; }
 
+footer {
+  margin: 32px 0;
+  background-image: linear-gradient(45deg, greenyellow 0%, greenyellow 50%, transparent 100%);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  font-family: "Open Sans", sans-serif;
+  padding: 10px; }
+
 .grid-container {
   width: 80%;
   height: 80vh;

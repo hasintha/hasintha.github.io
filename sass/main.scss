@@ -15,9 +15,9 @@ $color-gridlabelbg : #000;
 $color-gridlabel : #fff;
 
 //TYPOGRAPHY
-$heading-font-size: 1.4em;
+$heading-font-size: 1em;
 $description-font-size: 1em;
-$grid-item-font-family: "Arial";
+$grid-item-font-family: 'Open Sans', sans-serif;
 
 //TRANSITIONS
 $tran-time: .5s;
@@ -68,11 +68,21 @@ body, html {
         flex-grow: 1;
         flex-shrink: 1;
         justify-content: space-evenly;
-        align-content: center;    
+        align-items: center;        
     }
 
     &-boxwrapper {
         width: 50%;   
+    }
+
+    &-boxwrapper--singlecol {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        flex-shrink: 1;
+        justify-content: center;
+        align-items: center;   
     }
 
 }
@@ -84,7 +94,11 @@ body, html {
         padding: $box-padding;
         position: relative;
         overflow: hidden;
-        font-family: $grid-item-font-family;   
+        font-family: $grid-item-font-family;  
+        
+        &--singlecol {
+            width:100%;     
+        }
 
         & > a {
             text-decoration: none;
@@ -171,6 +185,10 @@ body, html {
     .intgrid__container-boxwrapper,
     .intgrid__griditem--bigbox {
         width: 100%;
+    }
+
+    .intgrid__container-boxwrapper--singlecol {
+        width: 50%;         
     }
 }
 

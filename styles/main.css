@@ -86,6 +86,8 @@ footer {
       color: #fff;
       text-align: center;
       height: 30px;
+      margin-bottom: 0;
+      line-height: inherit;
       transition: all 0.5s;
       position: relative;
       top: 50%;

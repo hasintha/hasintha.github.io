@@ -137,7 +137,9 @@ footer {
                 font-weight: bold;
                 color: $color-gridlabel;
                 text-align: center;
-                height: 30px;   
+                height: 30px;  
+                margin-bottom: 0;
+                line-height: inherit;   
                 transition: all $tran-time;
             
                 //NOT HOVERED STATE

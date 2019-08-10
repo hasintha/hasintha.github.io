@@ -1,0 +1,198 @@
+/*
+ * @author :Hasi Weragala
+ * SolutionsW3
+ * Interactive Grid base styling
+ */
+
+$color-blue: darkturquoise;
+$color-white : #fff;
+$color-yellowgreen: yellowgreen;
+$color-yellow: yellow;
+$color-black: #000;
+
+//GRID ITEMS
+$color-gridlabelbg : #000;
+$color-gridlabel : #fff;
+
+//TYPOGRAPHY
+$heading-font-size: 1.4em;
+$description-font-size: 1em;
+$grid-item-font-family: "Arial";
+
+//TRANSITIONS
+$tran-time: .5s;
+
+//PLACEMENTS AND DIMENSIONS
+$heading-pos-top : 10%;
+$para-pos-top: 11%;  
+$label-opacity: 0.5;
+$label-height: 20%;
+
+//NOT USED IN CALC PARAMETERS
+$box-padding: 5px; 
+
+body, html {
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(to right bottom, $color-yellowgreen, $color-yellow );
+    background-size: cover;
+    background-repeat: no-repeat;  
+    height: 100%;              
+}
+
+*,
+:hover,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+//GRID STYLING GOES BELOW
+.grid-container {
+    width: 80%;
+    height: 80vh;
+    margin: 10vh auto;          
+}    
+
+.intgrid__container { 
+
+    width: 100%;
+    box-shadow: 0 0 5px rgba($color-black,0.5);    
+
+    &, 
+    &-boxwrapper {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        flex-basis: 50%;
+        flex-grow: 1;
+        flex-shrink: 1;
+        justify-content: space-evenly;
+        align-content: center;    
+    }
+
+    &-boxwrapper {
+        width: 50%;   
+    }
+
+}
+
+.intgrid__griditem {
+        width:50%;
+                        
+        border: 2px solid yellowgreen;  
+        padding: $box-padding;
+        position: relative;
+        overflow: hidden;
+        font-family: $grid-item-font-family;   
+
+        & > a {
+            text-decoration: none;
+        }
+
+        &-img {
+            width: 100%;
+            height: auto;     
+            object-fit: cover;
+            object-position: center center;
+            margin: 0;
+            transition: all $tran-time;
+        }
+
+        &-label {
+            width: calc(100% - 10px);  
+            height: $label-height;
+            background-color: rgba($color-gridlabelbg, $label-opacity);  
+            position: absolute;
+            left: $box-padding;
+            bottom: $box-padding;
+            transition: height $tran-time;
+
+            & > h3 {
+                text-transform: uppercase;
+                font-family: inherit;
+                font-size: $heading-font-size;
+                font-weight: bold;
+                color: $color-gridlabel;
+                text-align: center;
+                height: 30px;   
+                transition: all $tran-time;
+            
+                //NOT HOVERED STATE
+            
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);    
+            }
+
+            & > p {
+                display: none;
+                padding: 10px;   
+                color: $color-gridlabel;
+                text-align: justify;
+                font-family: inherit;
+                font-size: $description-font-size;
+            
+                //MAKE SURE THE DESC IS ALWAYS BELOW THE HEADING
+                position: relative;
+                top: $para-pos-top; 
+                     
+            }
+        }
+
+        &:hover  .intgrid__griditem-img {
+            filter: blur(3px) brightness(90%);
+            transform: scale(1.2);
+        }
+        
+        &:hover  .intgrid__griditem-label {
+            
+            height: calc( 100% - 10px );  
+
+            & > h3 {
+                top: $heading-pos-top;
+            }
+              
+            & > p {  
+                display: block;   
+            }
+             
+        }
+      
+        
+             
+} // END GRID ITEM
+
+  
+  
+//RESPONSIVE ADJUSTMENTS
+@media (max-width: 768px)  {
+    //WRAP BIG BOXES
+    .intgrid__container-boxwrapper,
+    .intgrid__griditem--bigbox {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px)  {
+    //WRAP ALL BOXES
+    .intgrid__griditem {  
+        width: 100%;
+    }
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+  
+  
+  
+  
+  

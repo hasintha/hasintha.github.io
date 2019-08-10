@@ -1,0 +1,15 @@
+{
+  "name": "mycomponents.interactivegrid",
+  "version": "1.0.0",
+  "description": "An interactive grid to display various categories",
+  "main": "index.html",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "compile:sass": "node-sass  sass/main.scss styles/main.css   -w"
+  },
+  "author": "Hasintha Wera",
+  "license": "MIT"
+}

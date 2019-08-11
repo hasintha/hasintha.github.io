@@ -1,0 +1,97 @@
+
+
+.sw3-events-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;  
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-shrink: 1;
+  justify-content: stretch;
+  align-items: center;
+  width: 100%;
+}
+
+.sw3-events__event-item {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  width: 300px;
+  min-width: 300px;
+  display: inline-block;
+  margin: 3px;
+  overflow: hidden;
+}
+
+.sw3-events__event-item--1 {
+  background-color: #ff9146;
+  color: #fff;
+}
+
+.sw3-events__event-item--2 {
+  background-color: #206076;
+  color: #fff;
+}
+
+.sw3-events__event-item--3 {
+  background-color: #ed705a;
+  color: #fff;
+}
+
+.sw3-events__event-item--4 {
+  background-color: #7e528d;
+  color: #fff;
+}
+
+.sw3-events__event-item--5 {
+  background-color: #fbd540;
+  color: #fff;
+}
+
+.sw3-events__event-item--6 {
+  background-color: #b576c9;
+  color: #fff;
+}
+
+.sw3-events__event-item img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.sw3-events_event-item-info {
+  padding: 10px;
+}
+
+.sw3-events_event-item-info span
+{
+  display: block;
+}
+
+.sw3-events_event-item-info-date {
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.sw3-events_event-item-info-month {
+  text-transform: uppercase;
+}
+
+.sw3-btn {
+  background-color: #b36a1f;
+  color: #fff;
+  padding: 5px 10px;
+  text-decoration: none;
+  position: relative;
+}
+
+a.sw3-btn:hover {
+  transform: scale(1.2);
+}
+
+i {
+  width: 8%;
+  text-align: center;
+}
+

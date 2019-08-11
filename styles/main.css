@@ -54,7 +54,8 @@ footer {
 
 .intgrid__griditem {
   width: 50%;
-  border: 2px solid yellowgreen;
+  outline: 1px solid yellow;
+  outline-offset: -1em;
   padding: 5px;
   position: relative;
   overflow: hidden;
@@ -71,12 +72,12 @@ footer {
     margin: 0;
     transition: all 0.5s; }
   .intgrid__griditem-label {
-    width: calc(100% - 10px);
+    width: calc(100% - 2em);
     height: 50px;
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
-    left: 5px;
-    bottom: 5px;
+    left: 1em;
+    bottom: 1em;
     transition: height 0.5s; }
     .intgrid__griditem-label > h3 {
       text-transform: uppercase;
@@ -105,7 +106,7 @@ footer {
     filter: blur(3px) brightness(90%);
     transform: scale(1.2); }
   .intgrid__griditem:hover .intgrid__griditem-label {
-    height: calc( 100% - 10px); }
+    height: calc( 100% - 2em); }
     .intgrid__griditem:hover .intgrid__griditem-label > h3 {
       top: 10%; }
     .intgrid__griditem:hover .intgrid__griditem-label > p {

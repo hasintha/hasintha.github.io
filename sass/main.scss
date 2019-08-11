@@ -13,6 +13,7 @@ $color-black: #000;
 //GRID ITEMS
 $color-gridlabelbg : #000;
 $color-gridlabel : #fff;
+$color-grid-outline: yellow;  
 
 //TYPOGRAPHY
 $heading-font-size: 1em;
@@ -25,11 +26,12 @@ $tran-time: .5s;
 //PLACEMENTS AND DIMENSIONS
 $heading-pos-top : 10%;
 $para-pos-top: 11%;  
-$label-opacity: 0.5;
+$label-opacity: 0.5;  
 $label-height: 50px;
 
 //NOT USED IN CALC PARAMETERS
 $box-padding: 5px; 
+$label-pos: 1em; // => ALSO USED FOR GRID ITEM OUTLINE OFFSET  
 
 body, html {
     padding: 0;
@@ -98,8 +100,10 @@ footer {
 .intgrid__griditem {
         width:50%;
                         
-        border: 2px solid yellowgreen;  
-        padding: $box-padding;
+         
+        outline: 1px solid $color-grid-outline;  
+        outline-offset: -$label-pos;
+        padding: $box-padding;     
         position: relative;
         overflow: hidden;
         font-family: $grid-item-font-family;  
@@ -122,12 +126,12 @@ footer {
         }
 
         &-label {
-            width: calc(100% - 10px);  
+            width: calc(100% - 2em);  // 100% - 2 * $label-pos
             height: $label-height;
             background-color: rgba($color-gridlabelbg, $label-opacity);  
             position: absolute;
-            left: $box-padding;
-            bottom: $box-padding;
+            left: $label-pos;
+            bottom: $label-pos;
             transition: height $tran-time;
 
             & > h3 {
@@ -162,7 +166,7 @@ footer {
                 top: $para-pos-top; 
                      
             }
-        }
+        }  
 
         &:hover  .intgrid__griditem-img {
             filter: blur(3px) brightness(90%);
@@ -171,7 +175,7 @@ footer {
         
         &:hover  .intgrid__griditem-label {
             
-            height: calc( 100% - 10px );  
+            height: calc( 100% - 2em );  // 100% - ($label-pos * 2) 
 
             & > h3 {
                 top: $heading-pos-top;

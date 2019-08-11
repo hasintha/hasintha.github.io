@@ -1,0 +1,178 @@
+/* Color Pallette
+#2b2d42 -dark blue
+#8d99ae - light blue
+#edf2f4 - blue/whitish
+#ef233c - red
+*/
+
+
+/* ------ Global Styles ------ */
+
+/*- border box fix -*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/*-----------------*/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin:0px;
+}
+
+h1, h2{
+  font-family: 'Caveat', cursive;
+  font-weight:400;
+}
+h1{
+  font-size: 60px;
+}
+h2 {
+  font-size: 40px;
+  margin-top:0px;
+}
+h3 {
+  margin:0px;
+}
+a{
+  color:#ef233c;
+}
+
+a:hover{
+  text-decoration: none;
+  /*text-decoration: none | overline | line-through | underline | blink*/
+}
+
+.content-wrap {
+  max-width:950px;
+  margin: 0px auto;
+  padding: 60px 50px;
+  overflow:auto;
+}
+
+
+
+.btn{
+  text-decoration:none;
+  background-color:#ef233c;
+  color:#fff;
+  padding:10px;
+  display:inline-block;
+}
+
+.uppercase{
+  text-transform:uppercase;
+}
+
+
+/* ------ Header, Nav and Footer ----- */
+header, footer {
+  background-color :#2b2d42;
+  color:#8d99ae;
+}
+/* header */
+header{
+  padding-top:50px;
+  position:relative;
+}
+header h1, header h2{
+  color:#edf2f4;
+  margin:0px;
+}
+
+.profile-img{
+  border-radius: 50%;
+}
+
+.download{
+  position:absolute;
+  bottom:0;
+  right:0;
+}
+
+
+/* ------ Nav styles ------ */
+nav{
+  text-align:center;
+  background-color:#fff;
+  position:fixed;
+  top:0 !important;
+  width:100%;
+  z-index:10;
+}
+
+nav a {
+  display: inline-block;
+  padding: 15px 20px; /* top/bottom and left/right */
+  text-decoration:none;
+  text-transform: uppercase;
+  font-weight:700;
+}
+
+/* footer */
+footer{
+  text-align:center;
+}
+
+.contact-info a {
+  padding:10px;
+  background-color:#fff;
+  display:inline-block;
+  border:1px solid white;
+}
+
+/* ------ Work Experience ----- */
+.work {
+  background-color :#edf2f4;
+}
+
+h3 ~ p {
+  margin:0px;
+}
+.job-description{
+  margin-bottom:25px;
+}
+.job-description p:first-of-type {
+  margin-top:0px;
+}
+
+/* ------ Education ----- */
+.edu {
+  background-image: linear-gradient(rgba(141,153,174,0.3),rgba(141, 153, 174, 0.7)),
+                    url(../img/background-edu.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size:cover;
+  background-attachment:fixed;
+}
+
+p + h3{
+  margin-top:30px;
+}
+
+/* ------ Media Queries ----- */
+/* apply two columns for larger screens */
+@media screen and (min-width:900px){
+  .col-narrow {
+    width:30%;
+    float:left;
+  }
+
+  .col-wide {
+    width:70%;
+    float:left;
+    padding-left:20px;
+  }
+}
+
+@media screen and (max-width:899px){
+  header {
+    text-align:center;
+  }
+  .profile-img{
+    width:200px;
+  }
+
+}

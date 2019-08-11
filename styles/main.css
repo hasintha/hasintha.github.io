@@ -33,6 +33,9 @@ footer {
   width: 100%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
   .intgrid__container, .intgrid__container-boxwrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -45,6 +48,9 @@ footer {
     width: 50%; }
   .intgrid__container-boxwrapper--singlecol {
     width: 25%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     flex-direction: column;
     flex-grow: 1;

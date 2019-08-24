@@ -120,8 +120,8 @@ footer {
     .intgrid__griditem:hover .intgrid__griditem-label > p {
       display: block; }
 
-@media (max-width: 900px) {
-  .intgrid__griditem--basic {
+@media (max-width: 991px) {
+  .intgrid__griditem.intgrid__griditem--basic {
     width: 50%; } }
 
 @media (max-width: 768px) {
@@ -140,5 +140,5 @@ footer {
   .intgrid__griditem,
   .intgrid__container-boxwrapper--singlecol {
     width: 100%; }
-  .intgrid__griditem--basic {
+  .intgrid__griditem.intgrid__griditem--basic {
     width: 100%; } }

@@ -205,8 +205,8 @@ footer {
   
   
 //RESPONSIVE ADJUSTMENTS
-@media (max-width:900px) {
-    &.intgrid__griditem--basic {   //TACKLING A SPECIFICITY PROBLEM  
+@media (max-width:991px) {
+    .intgrid__griditem.intgrid__griditem--basic {   //TACKLING A SPECIFICITY PROBLEM  
         width: 50% ;        
     }
 }
@@ -240,9 +240,9 @@ footer {
     .intgrid__griditem,
     .intgrid__container-boxwrapper--singlecol {  
         width: 100%;
-    }
+    }     
 
-    &.intgrid__griditem--basic {   //TACKLING A SPECIFICITY PROBLEM  
+    .intgrid__griditem.intgrid__griditem--basic {   //TACKLING A SPECIFICITY PROBLEM     
         width: 100% ;        
     }
 }

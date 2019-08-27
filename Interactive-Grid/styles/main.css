@@ -3,14 +3,6 @@
  * SolutionsW3
  * Interactive Grid base styling
  */
-body, html {
-  padding: 0;
-  margin: 0;
-  background-image: linear-gradient(to right bottom, yellowgreen, yellow);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100%; }
-
 *,
 :hover,
 ::after,

@@ -41,14 +41,6 @@ $label-pos: 1em; // => ALSO USED FOR GRID ITEM OUTLINE OFFSET
     display: flex;
 }
 
-body, html {
-    padding: 0;
-    margin: 0;
-    background-image: linear-gradient(to right bottom, $color-yellowgreen, $color-yellow );
-    background-size: cover;
-    background-repeat: no-repeat;  
-    height: 100%;              
-}
 
 *,
 :hover,
@@ -75,7 +67,7 @@ footer {
 .intgrid__container { 
 
     width: 100%;
-    box-shadow: 0 0 5px rgba($color-black,0.5);    
+    box-shadow: 0 0 5px rgba($color-black,0.5);        
   
     &, 
     &-boxwrapper {

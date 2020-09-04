@@ -4,7 +4,7 @@
   "description": "An interactive grid to display various categories",
   "main": "index.html",
   "dependencies": {
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.13.1"
   },
   "devDependencies": {},
   "scripts": {
